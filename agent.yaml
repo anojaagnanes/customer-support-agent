@@ -1,0 +1,24 @@
+spec_version: "0.1.0"
+name: my-first-agent
+version: 0.1.0
+description: My first GitAgent-compatible AI agent
+author: your-name
+license: MIT
+
+model:
+  preferred: claude-sonnet-4-5-20250929
+  fallback:
+    - claude-haiku-4-5-20251001
+  constraints:
+    temperature: 0.2
+    max_tokens: 500
+
+skills:
+  - hello-world
+
+tools:
+  - none
+
+runtime:
+  max_turns: 5
+  timeout: 60
