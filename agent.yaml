@@ -1,8 +1,8 @@
 spec_version: "0.1.0"
-name: my-first-agent
+name: customer-support-agent
 version: 0.1.0
-description: My first GitAgent-compatible AI agent
-author: your-name
+description: AI agent for customer support tasks
+author: Anojaa Gnanes
 license: MIT
 
 model:
@@ -15,6 +15,9 @@ model:
 
 skills:
   - hello-world
+  - greet
+  - faq
+  - troubleshoot   # <-- This is where you list all skills
 
 tools:
   - none

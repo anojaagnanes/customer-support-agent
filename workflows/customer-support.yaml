@@ -1,0 +1,24 @@
+name: customer-support-flow
+description: Handles common customer queries step-by-step
+triggers:
+  - message_received
+
+steps:
+  greet:
+    skill: greet
+
+  hello_response:
+    skill: hello-world
+    depends_on: [greet]
+
+  faq_response:
+    skill: faq
+    depends_on: [hello_response]
+
+  troubleshoot:
+    skill: troubleshoot
+    depends_on: [faq_response]
+
+error_handling:
+  on_failure: notify
+  channel: "#support-errors"
